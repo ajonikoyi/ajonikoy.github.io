@@ -1,0 +1,24 @@
+---
+title: "US Economic Analysis Web App"
+author: "Adetunji Onikoyi"
+date: "June 14, 2017"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is an attempt to explore the US GDP by state and economic sector. The data was obtained from the Bureau of economic analysis. Here, a shiny web app has been embedded, to allow the user explore the analysis from 1997 to 2016. Note that the leaflet map has circular markers with varying radii, determined by the size of the GDP. 
+In a follow up publication, we will try to answer certain interesting questions based on this data. Stay tuned.
+
+```{r tabsets, echo=FALSE}
+shinyAppDir(
+  system.file("./examples/GDPfinal", package = "shiny"),
+  options = list(
+    width = "100%", height = 550
+  )
+)
+```
+
